@@ -1,12 +1,12 @@
 [
   {
     "id": "GitHub.copilot",
-    "download": "https://gitlab.devops.telekom.de/cis-ib/code4all/rhodevspaces/devspaces/internal-int-rhodevspaces-code-devspaces/-/raw/main/gc.vsix",
+    "download": "https://github.com/renzolv/devspaces/raw/refs/heads/main/gc.vsix",
     "version": "1.250.0"
   },
   {
     "id": "GitHub.copilot-chat",
-    "download": "https://gitlab.devops.telekom.de/cis-ib/code4all/rhodevspaces/devspaces/internal-int-rhodevspaces-code-devspaces/-/raw/main/gcc.vsix",
+    "download": "https://github.com/renzolv/devspaces/raw/refs/heads/main/gcc.vsix",
     "version": "0.19.0"
   },
   {
