@@ -2,7 +2,7 @@
   {
     "id": "GitHub.copilot",
     "download": "https://github.com/renzolv/devspaces/raw/refs/heads/main/gc.vsix",
-    "version": "1.250.0"
+    "version": "1.249.0"
   },
   {
     "id": "GitHub.copilot-chat",
