@@ -1,0 +1,32 @@
+# This folder contains forks of the upstream Che plugin and devfile registries.
+
+* che-devfile-registry
+* che-plugin-registry
+
+## Builds will:
+
+* fetch 3rd party sources, dependencies, and any applicable patches (eg., from npm/yarn/golang projects & registries)
+
+* collect link:https://github.com/devspaces-samples/[sample projects] and link:https://github.com/redhat-developer/devspaces-vscode-extensions[vscode-extensions]
+
+* tar sources & binaries used in Brew build
+
+* provide Dockerfile (synced w/ transformations to pkgs.devel for use in Brew), which can be also used to build the container locally
+
+## In the link:https://github.com/redhat-developer/devspaces-images[midstream], Brew builds must:
+
+* apply changes to upstream Dockerfile to see Pulp repos and support Brew build process
+
+* fetch 3rd party source/binary tarball, including patches
+
+* push that tar to dist-git lookaside cache so it's available when running the Dockerfile build
+
+* unpack the tar as part of the container build where required
+
+* run a container build
+
+## Downstream, Jenkins and Errata are used to:
+
+* publish CI builds to Quay
+* publish releases to Red Hat Ecosystem Catalog
+ 

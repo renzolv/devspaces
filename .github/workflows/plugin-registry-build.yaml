@@ -1,0 +1,55 @@
+#
+# Copyright (c) 2020-2024 Red Hat, Inc.
+# This program and the accompanying materials are made
+# available under the terms of the Eclipse Public License 2.0
+# which is available at https://www.eclipse.org/legal/epl-2.0/
+#
+# SPDX-License-Identifier: EPL-2.0
+#
+
+name: Plugin Registry - Build
+
+on:
+  push:
+    branches: 
+      - devspaces-3-rhel-8
+    paths:
+      - 'dependencies/che-plugin-registry/**'
+
+jobs:
+  next-build-publish:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: dependencies/che-plugin-registry
+    steps:
+      - name: Clone source code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '18'
+
+      - name: Login to the Red Hat Registry
+        uses: azure/docker-login@83efeb77770c98b620c73055fbb59b2847e17dc0 #v1
+        with:
+          login-server: registry.redhat.io
+          username: ${{ secrets.REGISTRY_REDHAT_IO_USERNAME }}
+          password: ${{ secrets.REGISTRY_REDHAT_IO_PASSWORD }}
+
+      - name: image-build
+        run: |
+          BUILDER=docker SKIP_FORMAT=true SKIP_LINT=true SKIP_TEST=true ./build.sh --tag next-gh-action --offline
+
+      - name: Login to quay.io
+        uses: docker/login-action@v1
+        with:
+          registry: quay.io
+          username: ${{ secrets.DS_QUAY_USERNAME }}
+          password: ${{ secrets.DS_QUAY_PASSWORD }}
+
+      - name: push plugin registry image
+        run: |
+          docker push quay.io/devspaces/pluginregistry-rhel8:next-gh-action

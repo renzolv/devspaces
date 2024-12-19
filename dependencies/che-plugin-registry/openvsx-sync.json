@@ -1,0 +1,36 @@
+[
+  {
+    "id": "GitHub.copilot",
+    "download": "https://gitlab.devops.telekom.de/cis-ib/code4all/rhodevspaces/devspaces/internal-int-rhodevspaces-code-devspaces/-/raw/main/gc.vsix",
+    "version": "1.250.0"
+  },
+  {
+    "id": "GitHub.copilot-chat",
+    "download": "https://gitlab.devops.telekom.de/cis-ib/code4all/rhodevspaces/devspaces/internal-int-rhodevspaces-code-devspaces/-/raw/main/gcc.vsix",
+    "version": "0.19.0"
+  },
+  {
+    "id": "ms-vscode.notepadplusplus-keybindings",
+    "version": "1.0.7"
+  },
+  {
+    "id": "usernamehw.indent-one-space",
+    "version": "0.3.0"
+  },
+  {
+    "id": "ritwickdey.LiveServer",
+    "version": "5.7.9"
+  },
+  {
+    "id": "ms-python.python",
+    "version": "2023.10.1"
+  },
+  {
+    "id": "redhat.vscode-yaml",
+    "version": "1.15.0"
+  },
+  {
+    "id": "redhat.ansible",
+    "version": "24.12.1"
+  }
+]

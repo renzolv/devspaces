@@ -1,0 +1,35 @@
+{
+    "Components" : 
+    {
+        "team-a" : {
+            "Description" : "Team A: Dashboard, devfile and plugin registries, open-vsx, operator + chectl/dsc, devfile-converter, configbump + traefik, image-puller, server, gateway, authentication, try-in-web-ide action, telemetry",
+            "Labels" : [ "area/dashboard", "area/factory/dashboard", "area/ts-workspace-client", "area/devfile-converter", "area/chectl", "area/install", "area/operator", "area/hosted-che", "area/image-puller", "area/devfile/v2", "area/devfile/v1", "area/samples", "area/getting-started", "area/factory/server", "area/che-server", "area/plugin-registry"  ],
+            "Email" : "ibuziuk@redhat.com",
+            "GH_User":"ibuziuk"
+        },
+        "team-b" : {
+            "Description": "Team B: DevWorkspace + Operator, Web Terminal + Operator, editors/IDEs + built-in vscode extensions, Universal Developer Image, machine-exec, dev environment config",
+            "Labels": [ "area/machine-exec", "area/ux", "area/dev-experience", "engine/devworkspace", "area/devworkspace-client", "area/devworkspace-operator", "area/devworkspace-che-operator", "area/editor/che-code", "area/editor/intellij-platform", "area/languages", "area/plugins", "area/git" ],
+            "Email" : "mloriedo@redhat.com",
+            "GH_User" : "l0rd"
+        },
+        "docs" : {
+            "Description": "docs",
+            "Labels": [ "team/doc", "status/release-notes-review-needed", "status/release-notes-review-done" ],
+            "Email" : "jvrbkova@redhat.com",
+            "GH_User":"deerskindoll"
+        },
+        "productization" : {
+            "Description": "productization: build & internals",
+            "Labels": [ "area/ci-prod" ],
+            "Email" : "nboldt@redhat.com",
+            "GH_User":"nickboldt"
+        },
+        "testing" : {
+            "Description": "testing",
+            "Labels": [ "area/qe", "e2e-test/failure" ],
+            "Email" : "dnochnevn@redhat.com",
+            "GH_User": "dmytro-ndp"
+        }
+    }
+}
